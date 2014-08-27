@@ -22,7 +22,7 @@ import (
 // WatchRE is used to parse a backend configuration. The config should
 // look like "backend=tag.service@datacenter:port". However, the tag, port and
 // datacenter are optional, so it can also be provided as "backend=service"
-var WatchRE = regexp.MustCompile("^([^=]+)=([^.]+\\.)?([^.:@]+)(@[^.:]+)?(:[0-9]+)?$")
+var WatchRE = regexp.MustCompile("^([^=]+)=(.+?\\.)?([^.:@]+)(@[^.:]+)?(:[0-9]+)?$")
 
 // WatchPath represents a path we need to watch
 type WatchPath struct {
